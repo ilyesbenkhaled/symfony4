@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}listes users{% endblock %}
+
+{% block body %}
+   {% block menu %}{% include('menu.html.twig') %}{% endblock %}             
+     
+ 
+      <table style="width:40%" border="1" class="table table-dark">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+     {% for liste in listes %}
+          <tr>
+              <th> {{  liste.username }}</th>
+              <th>{{ liste.email }}</th>
+              <th><p style="color:blue;"><a href="{{ path('delete', {id: liste.id}) }}" >delete</a></p></th>
+          </tr>
+          {% endfor %}
+      </table>
+
+{% endblock body%}
