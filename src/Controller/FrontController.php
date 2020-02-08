@@ -31,7 +31,7 @@ class FrontController extends AbstractController
             ->getRepository(User::class)
             ->findAll();
        // print_r($listes);
-        return $this->render('menu.html.twig', ['listes' => $listes ]);
+        return $this->render('front/listes_users.html.twig', ['listes' => $listes ]);
         
     }
     
