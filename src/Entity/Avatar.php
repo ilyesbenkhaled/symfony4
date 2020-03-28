@@ -16,59 +16,27 @@ class Avatar
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $path;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $title;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $info;
+    private $name;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getPath(): ?string
+    public function getName()
     {
-        return $this->path;
+        return $this->name;
     }
 
-    public function setPath(?string $path): self
+    public function setName($name)
     {
-        $this->path = $path;
+        $this->path = $name;
 
         return $this;
     }
 
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
-
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    public function getInfo(): ?string
-    {
-        return $this->info;
-    }
-
-    public function setInfo(string $info): self
-    {
-        $this->info = $info;
-
-        return $this;
-    }
 }

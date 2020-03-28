@@ -2,10 +2,11 @@
 
 {% block title %}index{% endblock %}
 
+
 {% block body %}
-    
- {% include('menu.html.twig') %}
- 
+{% block menu %}
+{{ render(url('menu_liste')) }}
+{% endblock %}
+this is index
 
-
-{% endblock body%}
+{% endblock body %}

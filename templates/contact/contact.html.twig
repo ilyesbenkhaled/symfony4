@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	{% block menu %}
+		{{ render(url('menu_liste')) }}
+	{% endblock menu %}
+	<div class="container">
+		<div class="row">
+
+			{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+			{% set class ='' %}
+
+			{% if not form.firstname.vars.valid %}
+				{% set class='has-error' %}
+			{% endif %}
+
+			<div class="form-group">
+				{% for message in app.flashes('success') %}
+					<div class="alert alert-success">
+						{{ message }}
+					</div>
+				{% endfor %}
+
+				{% set class ='' %}
+
+				{% if not form.firstname.vars.valid %}
+					{% set class='has-error' %}
+				{% endif %}
+
+				<div class="input-field col s12 m12 l12">
+					<label for="contact_firstname" class="required">Firstname</label>
+					<input type="text" id="contact_firstname" name="contact[firstname]" required="required" placeholder="firstname" class="form-control">
+					{% do form.firstname.setRendered %}
+
+
+				</div>
+				<div class="input-field col s12 m12 l12">
+					{{ form_label(form.lastname) }}
+					{{ form_widget(form.lastname, {'attr': {'placeholder': 'lastname'}}) }}
+				</div>
+
+				<div class="input-field col s12 m12 l12">
+					{{ form_label(form.email) }}
+					{{ form_widget(form.email, {'attr': {'placeholder': 'email@email.com'}}) }}
+				</div>
+
+				<div class="input-field col s12 m12 l12">
+					{{ form_label(form.message) }}
+					{{ form_widget(form.message, {'attr': {'class': 'materialize-textarea', 'placeholder': 'text me plz '}}) }}
+				</div>
+				<br>
+				<div class="input-field col s12 m12 l12">
+{{form_end(form)}}</div>
+
+			
+			</div>
+		</div>
+	</div>
+
+
+{% endblock body %}

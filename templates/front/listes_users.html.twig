@@ -1,11 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}listes users{% endblock %}
-
 {% block body %}
-   {% block menu %}{% include('menu.html.twig') %}{% endblock %}             
-     
- 
+    {% block menu %}
+    {{ render(url('menu_liste')) }}
+     {% endblock %}
+
       <table style="width:40%" border="1" class="table table-dark">
         <thead>
           <tr>
@@ -23,4 +22,4 @@
           {% endfor %}
       </table>
 
-{% endblock body%}
+{% endblock body %}

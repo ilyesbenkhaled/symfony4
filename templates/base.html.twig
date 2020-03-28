@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-     {% block javascript %}  
-        <script src="{{ asset('js/jquery.min.js') }}"></script>
-        <script src="{{ asset('js/popper.min.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        {% endblock %}
-       
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        {% endblock %}
-    </head>
-    <body>
-       
-        {% block body %}
 
+<head>
+  <title>
+    {% block title %}
+    Welcome!
+    {% endblock %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="{{ absolute_url('images/favicon.png') }}" />
+
+  {% block javascript %}
+  <script src="{{ asset('/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('/js/popper.min.js') }}"></script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+  {% endblock %}
+
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('/css/bootstrap/bootstrap.min.css') }}" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  {% endblock %}
+</head>
+
+<body>
+  {% block body %}
+        {% block menu %}
+        {{ render(url('menu_liste')) }}
         {% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+
+
+  {% endblock body%}
+
+  {% block javascripts %}
+  {% endblock %}
+
+{% block footer %}
+
+	<footer>
+
+<div id="sticky-footer" class="py-4 bg-dark text-white-50">
+	<div class="container text-center">
+		<small>Copyright &copy; Khaled ILyes</small>
+<div class="container">
+	<div class="row">
+		<div id="footer-copyright" class="col-md-6">
+			<p>&copy;
+				{{ 'now'|date('Y') }}
+				- The Symfony Project</p>
+		</div>
+		<div id="footer-resources" class="col-md-6">
+			<p>
+				<a href="https://twitter.com/symfony" title="Symfony Twitter">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.facebook.com/SensioLabs" title="SensioLabs Facebook">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a href="https://symfony.com/blog/" title="Symfony Blog">
+					<i class="fa fa-rss" aria-hidden="true"></i>
+				</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+	</div>
+</div>
+
+
+{% endblock footer %}
+
+</body></html>

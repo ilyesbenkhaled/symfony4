@@ -4,7 +4,10 @@
 
 {% block body %}
     
- {% include('menu.html.twig') %}
+{% block menu %}
+{{render(url('menu_liste'))}}
+{% endblock %}
+
     
 <form method="post">
     {% if error %}

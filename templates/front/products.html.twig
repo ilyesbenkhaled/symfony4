@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products{% endblock %}
+
+{% block body %}
+   {% block menu %}{% include('menu.html.twig') %}{% endblock %}             
+     
+
+      
+      
+      
+            <table style="width:40%" border="1" class="table table-dark">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+     {% for product in products %}
+          <tr>
+              <th> {{  product.name }}</th>
+              
+           
+          </tr>
+          {% endfor %}
+      </table>
+
+{% endblock body%}
