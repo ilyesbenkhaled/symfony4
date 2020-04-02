@@ -29,8 +29,8 @@ class ContactController extends AbstractController {
           
             $message = ( new \Swift_Message( 'Hello Email im a new email' ) )
              
-            ->setFrom($contactEmail['email'])
-            ->setTo('nutritionaecor@gmail.com')
+->setFrom($contactEmail['email'])
+->setTo('nutritionaecor@gmail.com')
             ->setReplyTo($contactEmail['email'])
             ->setBody($this->renderView(
                 'emails/registration.html.twig', 
