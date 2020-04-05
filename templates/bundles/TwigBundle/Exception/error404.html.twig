@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% block menu %}
+	{{ render(url('menu_liste')) }}
+{% endblock menu %}
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+<div class="row row-cols-3">
+<div class="col"></div>
+
+
+		<div class="col">
+			<div class="error-template">
+				<h1>
+					Oops!</h1>
+				<h2>
+					404 Not Found</h2>
+				<div class="error-details">
+					Sorry, an error has occured, Requested page not found!
+				</div>
+				<div class="error-actions">
+					<a href="{{path('index')}}" class="btn btn-primary">
+						<span class="glyphicon glyphicon-home"></span>
+						Take Me Home
+					</a>
+<a href="{{path('contact')}}" class="btn btn-success ">
+
+
+						<span class="glyphicon glyphicon-envelope"></span>
+						Contact Support
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
