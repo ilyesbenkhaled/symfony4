@@ -6,10 +6,10 @@ services:
     depends_on: 
       - php
     ports: 
-      - "70:70"
+      - "7000:7000"
     volumes: 
       - ".docker/config/vhosts:/etc/apache2/sites-enabled"
-      - ".:/home/wwwroot/symfony4"
+      - ".:/var/www/html/symfony4"
   maildev: 
     container_name: sf4_maildev
     image: djfarrelly/maildev
