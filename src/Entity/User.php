@@ -78,7 +78,7 @@ use Symfony\Component\Serializer\Serializer;
             public function getRoles(): array {
                 $roles = $this->roles;
                 // guarantee every user at least has ROLE_USER
-                $roles[] = "ROLE_USER";
+                $roles[] = "ROLE_ADMIN";
 
                 return array_unique( $roles );
             }
@@ -153,4 +153,10 @@ use Symfony\Component\Serializer\Serializer;
                     // $this->salt
                 ) = unserialize( $serialized, array( 'allowed_classes' => false ) );
             }
+
+            public function __toString()
+            {
+                return $this->getUsername();
+            }
+
     }

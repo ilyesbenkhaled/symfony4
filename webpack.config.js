@@ -26,6 +26,8 @@ Encore
     .addEntry('app', './assets/js/app.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
+    .addStyleEntry('login', './assets/css/profil.css')
+    .addStyleEntry('font', './assets/css/font.css')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -48,10 +50,10 @@ Encore
     .enableVersioning(Encore.isProduction())
 
     // enables @babel/preset-env polyfills
-    .configureBabelPresetEnv((config) => {
-        config.useBuiltIns = 'usage';
-        config.corejs = 3;
-    })
+    // .configureBabelPresetEnv((config) => {
+    //     config.useBuiltIns = 'usage';
+    //     config.corejs = 3;
+    // })
 
     // enables Sass/SCSS support
     //.enableSassLoader()
@@ -69,6 +71,27 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+
+    .configureBabel(() => {}, {
+        useBuiltIns: 'usage',
+        corejs: 3
+    })
+    // .configureBabel(function(babelConfig) {
+    //     // add additional presets
+    //     babelConfig.presets.push('@babel/preset-flow');
+
+    //     // no plugins are added by default, but you can add some
+    //     babelConfig.plugins.push('styled-jsx/babel');
+    // }, {
+    //     // node_modules is not processed through Babel by default
+    //     // but you can whitelist specific modules to process
+    //     includeNodeModules: ['foundation-sites'],
+
+    //     // or completely control the exclude rule (note that you
+    //     // can't use both "includeNodeModules" and "exclude" at
+    //     // the same time)
+    //     exclude: /bower_components/
+    // })
 ;
 
 module.exports = Encore.getWebpackConfig();

@@ -8,24 +8,27 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Form\ContactType;
 use Symfony\Component\Form\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use MercurySeries\FlashyBundle\FlashyNotifier;
 
 class ContactController extends AbstractController {
+
 
     /**
     * @Route( "/contact", name = "contact" )
     */
 
-    public function contact( Request $request, \Swift_Mailer $mailer ) {
+    public function contact( Request $request, \Swift_Mailer $mailer, FlashyNotifier $flashy) {
 
         $form = $this->createForm( ContactType::class );
         $form->handleRequest($request);
 
         if ( $form->isSubmitted() && $form->isValid() ) {
 
-            $this->addFlash('success', 'Message is sent successfully'); 
-            
+            $flashy->success('Welcome Aboard', 'http://your-awesome-link.com');
+
+           $this->addFlash('success', 'Message is sent successfully'); 
             $contactEmail = $form->getData();
-           // print_r($contactEmail);
+          //  print_r($flashy);
           
             $message = ( new \Swift_Message( 'Hello Email im a new email' ) )
              
@@ -37,12 +40,11 @@ class ContactController extends AbstractController {
                 ['cont' => $contactEmail])
         , 'text/html');
             $mailer->send( $message );
-            
+
             return $this->redirectToRoute('contact');           
         }
 
         
-
         return $this->render( 'contact/contact.html.twig', [
             'form' => $form->createView()
             ] );

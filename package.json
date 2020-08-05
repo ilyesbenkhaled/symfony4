@@ -1,7 +1,33 @@
 {
-  "devDependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.16.1"
-  }
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.14.0",
+        "@symfony/webpack-encore": "^0.30.0",
+        "core-js": "^3.0.0",
+        "file-loader": "^6.0.0",
+        "google-fonts-plugin": "^5.0.2",
+        "regenerator-runtime": "^0.13.2",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "name": "symfony4",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/ilyesbenkhaled/symfony4",
+    "author": "Ilyes Khaled <ilyeskhaled@gmail.com>",
+    "dependencies": {
+        "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+        "bootstrap": "^4.5.0",
+        "chokidar": "^3.4.1",
+        "font-awesome": "^4.7.0",
+        "google-fonts-webpack-plugin": "^0.4.4",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1"
+    }
 }

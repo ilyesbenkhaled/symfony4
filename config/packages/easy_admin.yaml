@@ -6,3 +6,6 @@ easy_admin:
         - App\Entity\User
         - App\Entity\Subcategory
 
+    # user:
+    #     ilyes: true
+    #     display_avatar: false

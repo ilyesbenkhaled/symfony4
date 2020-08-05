@@ -2,6 +2,8 @@
 
 {% block body %}
 
+
+
 	{% block menu %}
 		{{ render(url('menu_liste')) }}
 	{% endblock menu %}
@@ -9,6 +11,10 @@
 		<div class="row">
 
 			{{ form_start(form, {'attr': {'class': 'row'}}) }}
+
+
+
+
 
 			{% set class ='' %}
 
@@ -28,6 +34,8 @@
 				{% if not form.firstname.vars.valid %}
 					{% set class='has-error' %}
 				{% endif %}
+
+
 
 				<div class="input-field col s12 m12 l12">
 					<label for="contact_firstname" class="required">Firstname</label>
