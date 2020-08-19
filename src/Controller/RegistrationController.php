@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Doctrine\ORM\EntityRepository;
-
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class RegistrationController extends AbstractController
 {
@@ -47,7 +47,7 @@ class RegistrationController extends AbstractController
                             $request,
                             $authenticator,
                             'main' // firewall name in security.yaml
-            );
+            )?: new RedirectResponse('/');
         }
 
         return $this->render('registration/register.html.twig', [
