@@ -1,19 +1,18 @@
-var Encore = require('@symfony/webpack-encore');
+var Encore = require("@symfony/webpack-encore");
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
-    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
+    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || "dev");
 }
 
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('public/build/')
+    .setOutputPath("public/build/")
     // public path used by the web server to access the output path
-    .setPublicPath('/build')
+    .setPublicPath("/build")
     // only needed for CDN's or sub-directory deploy
-    //.setManifestKeyPrefix('build/')
-
+    //.setManifestKeyPrefix('build/'
     /*
      * ENTRY CONFIG
      *
@@ -23,11 +22,11 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/js/app.js')
+    .addEntry("app", "./assets/js/app.js")
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
-    .addStyleEntry('login', './assets/css/profil.css')
-    .addStyleEntry('font', './assets/css/font.css')
+    .addStyleEntry("login", "./assets/css/login.css")
+    // .addStyleEntry('font', './assets/css/font.css')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -66,32 +65,31 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 
     .configureBabel(() => {}, {
-        useBuiltIns: 'usage',
-        corejs: 3
-    })
-    // .configureBabel(function(babelConfig) {
-    //     // add additional presets
-    //     babelConfig.presets.push('@babel/preset-flow');
+        useBuiltIns: "usage",
+        corejs: 3,
+    });
+// .configureBabel(function(babelConfig) {
+//     // add additional presets
+//     babelConfig.presets.push('@babel/preset-flow');
 
-    //     // no plugins are added by default, but you can add some
-    //     babelConfig.plugins.push('styled-jsx/babel');
-    // }, {
-    //     // node_modules is not processed through Babel by default
-    //     // but you can whitelist specific modules to process
-    //     includeNodeModules: ['foundation-sites'],
+//     // no plugins are added by default, but you can add some
+//     babelConfig.plugins.push('styled-jsx/babel');
+// }, {
+//     // node_modules is not processed through Babel by default
+//     // but you can whitelist specific modules to process
+//     includeNodeModules: ['foundation-sites'],
 
-    //     // or completely control the exclude rule (note that you
-    //     // can't use both "includeNodeModules" and "exclude" at
-    //     // the same time)
-    //     exclude: /bower_components/
-    // })
-;
+//     // or completely control the exclude rule (note that you
+//     // can't use both "includeNodeModules" and "exclude" at
+//     // the same time)
+//     exclude: /bower_components/
+// })
 
 module.exports = Encore.getWebpackConfig();

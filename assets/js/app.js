@@ -6,21 +6,20 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import '../css/app.css';
+import "../css/app.css";
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
- // import $ from 'jquery';
+import $ from "jquery";
 
- const $ = require('jquery');
+// const $ = require("jquery");
 // this "modifies" the jquery module: adding behavior to it
 // the bootstrap module doesn't export/return anything
-require('bootstrap');
-require('bootstrap/dist/css/bootstrap.min.css');
-require('bootstrap/dist/js/bootstrap.bundle.js');
+import "popper.js";
+import "bootstrap";
+// import "font-awesome/css/font-awesome.css";
 
-
-$(document).ready(function() {
-    $('[data-toggle="popover"]').popover();
+$(document).ready(function () {
+  $('[data-toggle="popover"]').popover();
 });
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+console.log("Hello Webpack Encore! Edit me in assets/js/app.js");

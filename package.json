@@ -1,6 +1,10 @@
 {
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.14.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.31",
+        "@fortawesome/free-brands-svg-icons": "^5.15.0",
+        "@fortawesome/free-regular-svg-icons": "^5.15.0",
+        "@fortawesome/free-solid-svg-icons": "^5.15.0",
         "@symfony/webpack-encore": "^0.30.0",
         "core-js": "^3.0.0",
         "file-loader": "^6.0.0",
@@ -23,7 +27,7 @@
     "author": "Ilyes Khaled <ilyeskhaled@gmail.com>",
     "dependencies": {
         "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-        "bootstrap": "^4.5.0",
+        "bootstrap": "^4.5.2",
         "chokidar": "^3.4.1",
         "font-awesome": "^4.7.0",
         "google-fonts-webpack-plugin": "^0.4.4",
