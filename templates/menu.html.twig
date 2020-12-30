@@ -1,64 +1,67 @@
 {% block head%}
 
 <head>
-    {% block stylesheetss %}
+	{% block stylesheetss %}
 
-    <link rel="stylesheet" href="{{ asset('css/menu.css') }}" />
+		<link rel="stylesheet" href="{{ asset('css/menu.css') }}"/>
 
-    {% endblock %}
-</head>
-{% endblock head %}
-{% block body %} <div class="navbar">
-    <a href='{{ path('liste')}}'>Liste</a>
-    <a href='{{ path('app_register') }}'>Register</a>
-    <a href='{{ path('app_login')}}'>Login</a>
-    <a href='{{ path('contact')}}'>Contact</a>
-    <div class="dropdown">
-        <button class="dropbtn">Sport Nutrition
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
+	{% endblock %}
+</head>{% endblock head %}{% block body %}
+<div class="navbar">
+	<a href='{{ path('liste')}}'>Liste</a>
+	<a href='{{ path('app_register') }}'>Register</a>
+	<a href='{{ path('app_login')}}'>Login</a>
+	<a href='{{ path('contact')}}'>Contact</a>
+	<div class="dropdown">
+		<button class="dropbtn">Sport Nutrition
+			<i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
 
-            <div class="row">
-                <div class="column">
+			<div class="row">
+				<div class="column">
 
-                    <h3>Whey Proteins</h3>
+					<h3>Whey Proteins</h3>
 
-                    {% for article in articles %}
-                    <a href="{{ path('app_login') }}">
-                        {{ article.name }}
-                    </a>
-                    {% endfor %}
-
-
-                </div>
+					{% for article in articles %}
+						<a href="{{ path('app_login') }}">
+							{{ article.name }}
+						</a>
+					{% endfor %}
 
 
-                <div class="column">
-                    <h3>Whey Proteins</h3>
-                    <a href="#">Whey concentrate</a>
-                    <a href="#">Whey Isolate </a>
-                    <a href="#">Hydrolysed Whey </a>
-                </div>
+				</div>
 
 
-                <div class="column">
-                    <h3>Whey Proteins</h3>
-                    <a href="#">Whey concentrate</a>
-                    <a href="#">Whey Isolate </a>
-                    <a href="#">Hydrolysed Whey </a>
-                </div>
+				<div class="column">
+					<h3>Whey Proteins</h3>
+					<a href="#">Whey concentrate</a>
+					<a href="#">Whey Isolate
+					</a>
+					<a href="#">Hydrolysed Whey
+					</a>
+				</div>
 
 
-                <div class="column">
-                    <h3>Whey Proteins</h3>
-                    <a href="#">Whey concentrate</a>
-                    <a href="#">Whey Isolate </a>
-                    <a href="#">Hydrolysed Whey </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+				<div class="column">
+					<h3>Whey Proteins</h3>
+					<a href="#">Whey concentrate</a>
+					<a href="#">Whey Isolate
+					</a>
+					<a href="#">Hydrolysed Whey
+					</a>
+				</div>
 
-{% endblock body %}
+
+				<div class="column">
+					<h3>Whey Proteins</h3>
+					<a href="#">Whey concentrate</a>
+					<a href="#">Whey Isolate
+					</a>
+					<a href="#">Hydrolysed Whey
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{% endblock body %}

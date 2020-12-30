@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<section class="pb-5 step-1">
+      {{ form_start(form, {'action': path('step1'), 'method': 'POST'}) }}
+
+    <div class="form-group col-sm-6">
+      {{ form_label(form.dateService, 'What is the date of service of the order?'|trans) }}
+      {{ form_widget(form.dateService, {'attr': {'class': 'form-control'}}) }}
+  
+    </div>	
+  <div class="buttons-block-in-form">
+       <button type="submit" id="Step1" class="btn btn-primary btn-lg mt-4 float-right">Next <i class="iconsminds-arrow-right next"></i></button>
+  </div>
+{{ form_end(form)}}
+</section>																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+{% endblock %}
