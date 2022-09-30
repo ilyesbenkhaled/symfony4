@@ -823,8 +823,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector",
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1390,6 +1390,7 @@
                 "reflection",
                 "static"
             ],
+            "abandoned": "roave/better-reflection",
             "time": "2020-03-27T11:06:43+00:00"
         },
         {
@@ -2102,15 +2103,15 @@
             "autoload": {
                 "psr-4": {
                     "Pagerfanta\\": "lib/Core/",
+                    "Pagerfanta\\Twig\\": "lib/Twig/",
                     "Pagerfanta\\Adapter\\": "src/Adapter/",
-                    "Pagerfanta\\Doctrine\\Collections\\": "lib/Adapter/Doctrine/Collections/",
-                    "Pagerfanta\\Doctrine\\DBAL\\": "lib/Adapter/Doctrine/DBAL/",
-                    "Pagerfanta\\Doctrine\\MongoDBODM\\": "lib/Adapter/Doctrine/MongoDBODM/",
-                    "Pagerfanta\\Doctrine\\ORM\\": "lib/Adapter/Doctrine/ORM/",
-                    "Pagerfanta\\Doctrine\\PHPCRODM\\": "lib/Adapter/Doctrine/PHPCRODM/",
                     "Pagerfanta\\Elastica\\": "lib/Adapter/Elastica/",
                     "Pagerfanta\\Solarium\\": "lib/Adapter/Solarium/",
-                    "Pagerfanta\\Twig\\": "lib/Twig/"
+                    "Pagerfanta\\Doctrine\\ORM\\": "lib/Adapter/Doctrine/ORM/",
+                    "Pagerfanta\\Doctrine\\DBAL\\": "lib/Adapter/Doctrine/DBAL/",
+                    "Pagerfanta\\Doctrine\\PHPCRODM\\": "lib/Adapter/Doctrine/PHPCRODM/",
+                    "Pagerfanta\\Doctrine\\MongoDBODM\\": "lib/Adapter/Doctrine/MongoDBODM/",
+                    "Pagerfanta\\Doctrine\\Collections\\": "lib/Adapter/Doctrine/Collections/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2605,6 +2606,7 @@
                 "mail",
                 "mailer"
             ],
+            "abandoned": "symfony/mailer",
             "time": "2019-11-12T09:31:26+00:00"
         },
         {
@@ -2661,9 +2663,6 @@
             ],
             "description": "Symfony Asset Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/asset/tree/v4.3.10"
-            },
             "time": "2020-01-04T12:24:57+00:00"
         },
         {
@@ -2986,9 +2985,6 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/console/tree/v4.3.11"
-            },
             "time": "2020-01-25T12:32:28+00:00"
         },
         {
@@ -3042,9 +3038,6 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v5.1.4"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3130,6 +3123,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2020-09-09T05:20:36+00:00"
         },
         {
@@ -3447,9 +3441,6 @@
                 "env",
                 "environment"
             ],
-            "support": {
-                "source": "https://github.com/symfony/dotenv/tree/v4.3.11"
-            },
             "time": "2020-01-08T17:19:22+00:00"
         },
         {
@@ -3733,9 +3724,6 @@
             ],
             "description": "Symfony ExpressionLanguage Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/expression-language/tree/4.3"
-            },
             "time": "2020-01-04T12:24:57+00:00"
         },
         {
@@ -3786,9 +3774,6 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3852,9 +3837,6 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4315,9 +4297,6 @@
             ],
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/http-client/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4659,9 +4638,6 @@
                 "l10n",
                 "localization"
             ],
-            "support": {
-                "source": "https://github.com/symfony/intl/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4744,9 +4720,6 @@
             ],
             "description": "Symfony Mailer Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/mailer/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4824,9 +4797,6 @@
                 "mime",
                 "mime-type"
             ],
-            "support": {
-                "source": "https://github.com/symfony/mime/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5055,9 +5025,6 @@
                 "configuration",
                 "options"
             ],
-            "support": {
-                "source": "https://github.com/symfony/options-resolver/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5147,12 +5114,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5304,12 +5271,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5386,12 +5353,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -5438,20 +5405,23 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.1",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -5459,7 +5429,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -5467,12 +5437,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5511,7 +5481,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -5541,12 +5511,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5614,12 +5584,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -5690,12 +5660,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -5789,9 +5759,6 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/process/tree/v4.3.10"
-            },
             "time": "2020-01-09T09:39:05+00:00"
         },
         {
@@ -5860,9 +5827,6 @@
                 "property path",
                 "reflection"
             ],
-            "support": {
-                "source": "https://github.com/symfony/property-access/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5954,9 +5918,6 @@
                 "type",
                 "validator"
             ],
-            "support": {
-                "source": "https://github.com/symfony/property-info/tree/5.1"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6304,9 +6265,6 @@
             ],
             "description": "Symfony Security Component - CSRF Library",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/security-csrf/tree/5.1"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6735,9 +6693,6 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v5.1.4"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6789,12 +6744,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\String\\": ""
-                },
                 "files": [
                     "Resources/functions.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
@@ -6913,6 +6868,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/mailer",
             "time": "2020-10-06T05:51:35+00:00"
         },
         {
@@ -7543,9 +7499,6 @@
                 "instantiate",
                 "serialize"
             ],
-            "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/5.1"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7633,9 +7586,6 @@
                 "psr13",
                 "push"
             ],
-            "support": {
-                "source": "https://github.com/symfony/web-link/tree/v4.3.10"
-            },
             "time": "2020-01-04T12:24:57+00:00"
         },
         {
@@ -7748,9 +7698,6 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/yaml/tree/4.3"
-            },
             "time": "2020-01-21T11:09:03+00:00"
         },
         {
@@ -7926,16 +7873,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.0.5",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9b76b1535483cdf4edf01bb787b0217b62bd68a5"
+                "reference": "c38fd6b0b7f370c198db91ffd02e23b517426b58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9b76b1535483cdf4edf01bb787b0217b62bd68a5",
-                "reference": "9b76b1535483cdf4edf01bb787b0217b62bd68a5",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c38fd6b0b7f370c198db91ffd02e23b517426b58",
+                "reference": "c38fd6b0b7f370c198db91ffd02e23b517426b58",
                 "shasum": ""
             },
             "require": {
@@ -7945,12 +7892,12 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -7994,7 +7941,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-05T15:13:19+00:00"
+            "time": "2022-09-28T08:42:51+00:00"
         },
         {
             "name": "webimpress/safe-writer",
@@ -8056,12 +8003,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -8370,9 +8317,6 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/browser-kit/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -8453,9 +8397,6 @@
             ],
             "description": "Symfony DebugBundle",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/debug-bundle/tree/v5.1.4"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -8575,9 +8516,6 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/dom-crawler/tree/v5.1.7"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -8892,9 +8830,6 @@
             ],
             "description": "Symfony WebProfilerBundle",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/web-profiler-bundle/tree/v5.0.11"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
