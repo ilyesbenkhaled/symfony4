@@ -5,7 +5,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.15.0",
         "@fortawesome/free-regular-svg-icons": "^5.15.0",
         "@fortawesome/free-solid-svg-icons": "^5.15.0",
-        "@symfony/webpack-encore": "^0.30.0",
+        "@symfony/webpack-encore": "^4.1.1",
         "core-js": "^3.0.0",
         "file-loader": "^6.0.0",
         "google-fonts-plugin": "^5.0.2",
